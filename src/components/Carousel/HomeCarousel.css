@@ -1,0 +1,57 @@
+.main-banner {
+  position: relative;
+  z-index: 1; /* Carousel will stay behind both TopHeader and MainNavbar */
+  top: 0;
+}
+
+.carousel-overlay {
+  position: absolute; /* Ensure overlay is on top of carousel content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1; /* Lower than the TopHeader and MainNavbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  
+}
+
+.carousel img {
+  width: 100%;
+  height: 100vh; /* Fullscreen height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.overlay-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.overlay-button {
+  background-color: #fc940b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.custom-font {
+  font-family: 'Arial', sans-serif;
+}

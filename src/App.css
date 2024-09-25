@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
-}
+:root {
+  /** Font family declaration */
+  --it-ff-body: "Sora", sans-serif;
+  --it-ff-heading: "Epilogue", sans-serif;
+  --it-ff-poppins: "Poppins", sans-serif;
+  --it-ff-fontawesome: "Font Awesome 6 Pro";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /** Color declaration */
+  --it-common-white: #ffffff;
+  --it-common-black: #0e2a46;
+  --it-common-black-2: #4d5756;
+  --it-common-yellow: #f2a227;
+  --it-common-yellow-2: #fc9f0b;
+  --it-heading-primary: #0e2a46;
+  --it-grey-1: #f2f2f2;
+  --it-grey-2: #f3f5f5;
+  --it-grey-3: #f9f6ef;
+  --it-text-body: #333931;
+  --it-theme-1: #1c5739;
+  --it-theme-2: #116e63;
+  --it-theme-3: #2356f6;
+  --it-theme-4: #22a3d1;
+  --it-theme-5: #ff9e0e;
+  --it-theme-6: #fd6d4b;
 }

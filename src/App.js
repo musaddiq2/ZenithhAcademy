@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import HomePage from "./pages/HomePage.js";
+import Footer from "./components/Footer/Footer.js";
+import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ModalComponent from "./components/ModalComponent.js";
+import Preloader from "./components/Preloader.js";
+const App = () => {
+  const [loading, setLoading] = useState(true);
 
-function App() {
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000); // Simulate loading delay
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <div style={{ position: "relative" }}>
+          <HomePage />
+          <Footer />
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default App;

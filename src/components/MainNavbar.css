@@ -1,0 +1,10 @@
+.header-container {
+  position: absolute;
+  top: 30px; /* Adjust as needed based on the height of TopHeader */
+  width: 100%;
+  z-index: 9; /* Higher than the carousel and overlay */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
