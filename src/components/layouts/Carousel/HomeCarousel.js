@@ -3,12 +3,24 @@ import React from "react";
 import { Box } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import "./HomeCarousel.css";
+const baseUrl = process.env.REACT_APP_IMAGE_BASE_URL;
+
 const HomeCarousel = () => {
   const items = [
     {
-      img: require("../../assets/images/Picture1.png"),
+      img: `${baseUrl}/Picture1.png`,
       alt: "Slide 1",
       isFirst: true,
+    },
+    {
+      img: `${baseUrl}/Picture2.png`,
+      alt: "Slide 2",
+      
+    },
+    {
+      img: `${baseUrl}/Picture4.png`,
+      alt: "Slide 3",
+      
     },
   ];
 
@@ -26,7 +38,7 @@ const HomeCarousel = () => {
             {item.isFirst && (
               <div className="carousel-overlay">
                 <img
-                  src={require("../../assets/images/logo.png")}
+                  src={`${baseUrl}/logo.png`}
                   alt="Logo"
                   className="logo"
                 />

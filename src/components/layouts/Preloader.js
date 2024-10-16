@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+const baseUrl = process.env.REACT_APP_IMAGE_BASE_URL;
 const useStyles = makeStyles((theme) => ({
   preloader: {
     position: 'fixed',
@@ -57,7 +57,7 @@ function Preloader() {
     <div className={classes.preloader}>
       <div className={classes.logo}>
         <div className={classes.border}></div>
-        <img className={classes.image} src={require("../assets/images/logo.png")} alt="Logo" />
+        <img className={classes.image} src={`${baseUrl}/logo.png`} alt="Logo" />
       </div>
     </div>
   );

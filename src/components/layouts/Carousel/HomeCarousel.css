@@ -1,0 +1,99 @@
+.main-banner {
+  position: relative;
+  z-index: 1; /* Carousel will stay behind both TopHeader and MainNavbar */
+  top: 0;
+}
+
+.carousel-overlay {
+  position: absolute; /* Ensure overlay is on top of carousel content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1; /* Lower than the TopHeader and MainNavbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100vh; /* Fullscreen height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.overlay-text {
+  font-size: 24px; /* Base font size */
+  margin-bottom: 10px;
+}
+
+.overlay-button {
+  background-color: #fc940b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.custom-font {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .overlay-text {
+    font-size: 20px; /* Slightly smaller font size for tablets */
+  }
+  
+  .logo {
+    width: 80px; /* Smaller logo for tablets */
+  }
+  
+  .overlay-button {
+    padding: 8px 16px; /* Adjust button padding for tablets */
+  }
+}
+
+@media (max-width: 900px) {
+  .overlay-text {
+    font-size: 18px; /* Smaller font size for mobile devices */
+  }
+
+  .logo {
+    width: 60px; /* Smaller logo for mobile devices */
+  }
+
+  .overlay-button {
+    padding: 6px 12px; /* Adjust button padding for mobile devices */
+  }
+}
+
+@media (max-width: 600px) {
+  .overlay-text {
+    font-size: 16px; /* Even smaller font size for very small screens */
+  }
+
+  .logo {
+    width: 50px; /* Smallest logo size for very small screens */
+  }
+
+  .overlay-button {
+    padding: 5px 10px; /* Minimal button padding for very small screens */
+  }
+}

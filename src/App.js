@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import HomePage from "./pages/HomePage.js";
-import Footer from "./components/Footer/Footer.js";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import HomePage from "./components/pages/HomePage.js";
+import Footer from "./components/layouts/Footer/Footer.js";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ModalComponent from "./components/ModalComponent.js";
-import Preloader from "./components/Preloader.js";
+import ModalComponent from "./components/layouts/ModalComponent.js";
+import Preloader from "./components/layouts/Preloader.js";
+import ContactPage from "./components/pages/ContactPage.js";
+import AboutPage from "./components/pages/AboutPage.js";
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -17,12 +20,27 @@ const App = () => {
       {loading ? (
         <Preloader />
       ) : (
-        <div style={{ position: "relative" }}>
-          <HomePage />
-          <Footer />
-        </div>
+        <Router>
+          <AppContent />
+        </Router>
       )}
     </>
+  );
+};
+
+const AppContent = () => {
+  const location = useLocation();
+  
+  return (
+    <div style={{ position: "relative" }}>
+      {location.pathname === "/" && <ModalComponent />} {/* Show modal only on Home page */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/aboutus" element={<AboutPage />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 };
 

@@ -11,31 +11,32 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import TwitterIcon from "@mui/icons-material/Twitter";
+const baseUrl = process.env.REACT_APP_IMAGE_BASE_URL;
 
 const Footer = () => {
   const items = [
     {
-      img: require("../../assets/images/thumb.png"),
+      img: `${baseUrl}/thumb.png`,
       alt: "Slide 1",
       isFirst: true,
     },
     {
-      img: require("../../assets/images/thumb.png"),
+      img: `${baseUrl}/thumb.png`,
       alt: "Slide 1",
       isFirst: true,
     },
     {
-      img: require("../../assets/images/thumb.png"),
+      img: `${baseUrl}/thumb.png`,
       alt: "Slide 1",
       isFirst: true,
     },
     {
-      img: require("../../assets/images/thumb.png"),
+      img: `${baseUrl}/thumb.png`,
       alt: "Slide 1",
       isFirst: true,
     },
     {
-      img: require("../../assets/images/thumb.png"),
+      img: `${baseUrl}/thumb.png`,
       alt: "Slide 1",
       isFirst: true,
     },
@@ -50,7 +51,7 @@ const Footer = () => {
             <Grid2 item xs={12} sm={6} md={4}>
               <Box>
                 <img
-                  src={require("../../assets/images/logo.png")}
+                  src={`${baseUrl}/logo.png`}
                   alt="Logo"
                   style={{ marginBottom: "20px",width:"50px" }}
                 />
